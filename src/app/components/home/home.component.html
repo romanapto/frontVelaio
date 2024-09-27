@@ -1,0 +1,25 @@
+
+<table class="table" >
+    <thead>
+      <tr>
+        <th scope="col">Accion</th>
+        <th scope="col">#</th>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let tarea of tareas; let i = index">
+      <tr>
+        <td><button (click)="verTarea(tarea.idtarea,'Edicion')"
+          type="button" class="btn btn-outline-primary btn-block">Ver tarea</button></td>
+        <th scope="row">{{i}}</th>
+        <td>{{tarea.idtarea}}</td>
+        <td>{{tarea.nombreTarea}}</td>
+        
+      </tr>
+      
+    </tbody>
+    <button (click)="crearTarea('Crear')"
+          type="button" class="btn btn-outline-primary btn-block">Crear Tarea</button>
+  </table>
+
